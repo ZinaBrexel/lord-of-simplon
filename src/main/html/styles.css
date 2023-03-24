@@ -1,43 +1,69 @@
-html {
+html, body{
+    overflow-y: scroll;
+    overflow-x: hidden; /* pour désactiver la barre de défilement horizontale */
+    margin: 0;
+    padding: 0;
     background-color: #161c2d;
+    }
+html {
     width: 100%;
     height: 100%;
     max-height: 100%;
+    
 }
 
 body {
-    background-color: #161c2d;
-    background-size: 100%;
     color: #ffffff;
+    background-size: 100%;
     font-family: sans-serif;
     width: 100%;
     height: 100%;
     max-height: 100%;
 }
+body.index{
+    background-image: url("img/Paladin.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-blend-mode: color-dodge;
+}
 
-h1 {
+.titre {
     margin-top: 30px;
     text-align: center;
     font-size: xxx-large;
+    font-weight: lighter;
+    color: #FFB800;
+    font-family: "Irish Grover", cursive;
 }
 
 .heroe-header-line {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
     margin-bottom: 30px;
-    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.heroe-header-line h3{
+
+    color: #FFB800;
 }
 
 .button {
     display: inline-block;
-    color: white;
-    background-color: #73Cfe0;
+    color: black;
+    background-color: #FFB800;
     border: none;
     border-radius: 5px;
     padding: 8px 50px;
     font-size: 16px;
     transition-duration: 0.4s;
+    font-weight: bold;
+    height: 30px;
+}
+.button a{
+    text-decoration: none;
+    color:black;
 }
 
 .button:hover {
@@ -46,24 +72,36 @@ h1 {
 }
 
 /* -----------------------------------------------------------*/
-.heroe-selection-line {
+.heroe-choice{
     display: flex;
-    width: 600px;
-    margin: auto;
+    align-items: center;
+    justify-content: center;
 }
 
-.radio-player {
+.heroe-card-choice{
     display: flex;
-    float: left;
-    margin-left: 25px;
-    margin-right: 25px;
+    flex-direction: column;
+    gap:10px;
+    width: 60%;
+}
+
+.heroe-selection-line {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+}
+
+input{
+    accent-color:#C66767;
+    height: 20px;
+    width: 20px;
 }
 
 .heroe-card {
     display: flex;
-    float: left;
     color: black;
-    background-color: white;
+    background-color: #D9D9D9;
     border-radius: 10px;
     padding: 20px;
     width: 400px;
@@ -72,9 +110,15 @@ h1 {
 }
 
 .heroe-card-text {
-    margin: auto;
+    margin-top: 8px;
 }
+.heroe-card-text h1{
+    margin-top: 30px;
+    text-align: center;
+    font-size: xxx-large;
+    color: black;
 
+}
 .heroe-card-img {
     float: left;
     display: block;
@@ -96,11 +140,164 @@ h1 {
 
 .heroe-description {
     float: none;
-    margin: 0;
+    margin-top: 5px;
     padding: 0;
     font-size: x-small;
 }
 
+/*-------------------------------------------------------------------
+    fight.html
+    -----------------------------------------------------------------
+*/
+
+.combat{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+
+.VS{
+    display: flex;
+    color: #FFB800;
+    font-weight: bold;
+    font-size: 60px;
+    align-items: center;
+}
+
+#J1{
+    background-color:  #736E6E;
+    align-items: center;
+    height: 60px;
+}
+
+#J2{
+    border: solid 8px #FFB800;
+    border-radius: 10px;  
+    align-items: center;
+    box-sizing: content-box;
+    height: 60px;
+}
+
+.heroe-card-text-vs{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.heroe-card-text-vs h2{
+    margin-bottom: 0;
+}
+
+.heroe-card-text-vs p{
+    font-size: large;
+}
+
+.pts{
+    color: #A0A0A0;
+}
+
+.score {
+    font-size: 72pt;
+    font-weight: bolder;
+}
+
+.sort_J1, .sort_J2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 18px;
+    height: 40px;
+}
+
+.sort_J1{
+    color: #C66767;
+}
+
+.turns{
+    font-size: 14px;
+}
+.action{
+    display: flex;
+    align-items: center;
+}
+
+h4{
+    margin-bottom: 5px;
+}
+.scroller {
+    width: 450px;
+    height: 200px;
+    overflow-y: scroll;
+    color: #161c2d;
+    background-color: #736E6E;
+    border-radius: 10px; 
+}
+
+.type_sort{
+    margin: 10px;
+}
+
+.type_sort div{
+    display: flex;
+    margin-top: 8px;
+    justify-content: space-between;
+
+}
+
+.name_sort, .points_negatif, .points_positif{
+    font-weight: bold;
+    font-size: large;
+}
+.points_negatif{
+    color: #C66767;
+}
+.points_positif{
+    color: #7F946A;
+}
+
+hr{
+    border-color: black;
+}
+.liste_sorts{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+h5{
+    margin: 0;
+    margin-bottom: 10px;
+}
+.coups, .sortileges{
+    display: flex;
+}
+.coups button{
+    background:#FFB800 ;
+    border-radius: 10px;
+    border: none;
+    
+}
+button, .bonus, .malus{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-left: 0;
+    
+    align-items: center;
+}
+.nom_sort{
+    font-weight: bold;
+}
+.bonus{
+    background:#7F946A ;
+    border-radius: 10px;
+    border: none;
+}
+.malus{
+    background:#C66767 ;
+    border-radius: 10px;
+    border: none;
+}
 /* ------------------------------------------------------------------
    correction-fight.html
    ------------------------------------------------------------------
@@ -177,12 +374,12 @@ h1 {
     font-size: 8pt;
 }
 
-.score {
+/*.score {
     float: right;
     font-size: 54pt;
     font-weight: bolder;
     color: lightgrey;
-}
+}*/
 
 /* ------------------------ */
 #header-coups {

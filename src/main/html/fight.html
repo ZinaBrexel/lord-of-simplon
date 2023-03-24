@@ -4,12 +4,194 @@
     <meta charset="UTF-8">
     <title>Lord of Simplon</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<H1>Lord of Simplon</H1>
+    <H1 class="titre">Lord of Simplon</H1>
+    <div class="combat">
+        <div>
+            <div id="J1" class="heroe-card">
+                <div class="heroe-card-img">
+                    <img src="img/Paladin.png" alt="Log du paladin">
+                </div>
+                <div class="heroe-card-text-vs">
+                    <div>
+                        <h2>Joueur 1</h2>
+                        <p class="heroe-description">Paladin
+                        </p>
+                    </div>
+                    <div class="pts">
+                        <span class="score">46</span>
+                        <span>pts</span>
+                    </div>
+                </div>
+            </div>
 
-    <!-- TODO -->
+            <div class="sort_J1">
+                <span>Sortilège reçu : Mal de mer (-5)</span>
+                <span class="turns">Actif pendant encore 2 tours</span>
+            </div>
+            <h4>Coups reçus :</h4>
+            <div class="action">
+            <div class="scroller">
+                <div class="type_sort">
+                    <span>Attaque</span>
+                    <div>
+                        <span class="name_sort">Coin de table</span>
+                        <span class="points_negatif">-8pts</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="type_sort">
+                    <span>Attaque</span>
+                    <div>
+                        <span class="name_sort">Clous rouillés</span>
+                        <span class="points_negatif">-8pts</span>
+                    </div>
+                    
+                </div>
+                <hr>
+                <div class="type_sort">
+                    <span>Attaque</span>
+                    <div>
+                        <span class="name_sort">Eau bouillante</span>
+                        <span class="points_negatif">-8pts</span>
+                    </div>
+                    
+                </div>
+                <hr>
+                <div class="type_sort">
+                    <span>Attaque</span>
+                    <div>
+                        <span class="name_sort">Clous rouillés</span>
+                        <span class="points_negatif">-8pts</span>
+                    </div>
+                    
+                </div>
+                <hr>
+                <div class="type_sort">
+                    <span>Attaque</span>
+                    <div>
+                        <span class="name_sort">Coin de table</span>
+                        <span class="points_negatif">-8pts</span>
+                    </div>
+                    
+                </div>
+                <hr>
+                
+            </div>
+            </div>
+        </div>
+            
+        <span class="VS">VS</span>
+            <div>
+                <div id="J2" class="heroe-card">
+                    <div class="heroe-card-img">
+                        <img src="img/Shifumy.png" alt="Log du Shifumy">
+                    </div>
+                    <div class="heroe-card-text-vs">
+                        <div><h2>Joueur 2</h2> 
+                            <p class="heroe-description">Shifumy
+                            </p>
+                        </div>
+                        <div class="pts">
+                            <span class ="score">14</span>
+                            <span>pts</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sort_J2">
+                    <span>Aucun sortilège</span>
+                </div>
+                <h4>Coups reçus :</h4>
+                <div class="action">
+                    <div class="scroller">
+                        <div class="type_sort">
+                            <span>Attaque</span>
+                            <div>
+                                <span class="name_sort">Epée capricieuse</span>
+                                <span class="points_negatif">-12pts</span>
+                            </div>    
+                        </div>
+                        <hr>
+                        <div class="type_sort">
+                            <span>Régénération</span>
+                            <div>
+                                <span class="name_sort">Fontaine de jouvence</span>
+                                <span class="points_positif">+15pts</span>
+                            </div>
+                            
+                        </div>
+                        <hr>
+                        <div class="type_sort">
+                            <span>Attaque</span>
+                            <div>
+                                <span class="name_sort">Croche-pied</span>
+                                <span class="points_negatif">-10pts</span>
+                            </div>
+                            
+                        </div>
+                        <hr>
+                        <div class="type_sort">
+                            <span>Attaque</span>
+                            <div>
+                                <span class="name_sort">Poing malin</span>
+                                <span class="points_negatif">-14pts</span>
+                            </div>
+                            
+                        </div>
+                        <hr>
+                        <div class="type_sort">
+                            <span>Attaque</span>
+                            <div>
+                                <span class="name_sort">Croche-pied</span>
+                                <span class="points_negatif">-10pts</span>
+                            </div>
+                            
+                        </div>
+                        <hr>
+                        
+                    </div>
+                </div>
 
+                <div class="liste_sorts">
+                    <span>À votre tour de jouer !</span>
+                    <h5>Choisissez le coup à donner à votre adversaire :</h5>
+                    <div class="coups">
+                        <button>
+                            <span class="nom_sort">Coin de table</span>
+                            <span>-8 pts</span>
+                        </button>
+                        <button>
+                            <span class="nom_sort">Clous rouillés</span>
+                             <span>-8 pts</span>
+                        </button>
+                        <button>
+                            <span class="nom_sort">Eau bouillante</span>
+                            <span> -8 pts</span>
+                        </button>
+                    </div>
+                    <h5>Régénérations et sortilèges :</h5>
+                    <div class="sortileges">
+                        <button class="bonus">
+                            <span class="nom_sort">Fontaine de jouvence</span>
+                            <span>+15 pts</span>
+                            
+                        </button>
+                        <button class="malus">
+                            <span class="nom_sort">Mal de mer</span>
+                             <span>-5 pts (3tours)</span>
+                        </button>
+                    </div>
+
+
+                </div>
+                
+        
+            </div>
+            
+    </div>
 </body>
 </html>

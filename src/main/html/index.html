@@ -4,46 +4,74 @@
     <meta charset="UTF-8">
     <title>Lord of Simplon</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-<H1>Lord of Simplon</H1>
+<body class="index">
+    <H1 class="titre">Lord of Simplon</H1>
 
-<!-- Ligne d'entête -->
-<div class="heroe-header-line">
-    <button id="demarrer" class="button" type="button" onclick="">Démarrer</button>
-</div>
-
-<!-- Ligne de sélection d'un héros : de part et d'autre de la card du héros on doit mettre des cases à cocher -->
-<div class="heroe-selection-line">
-
-    <!-- TODO : Case à cocher -->
-
-    <div class="heroe-card">
-        <div class="heroe-card-img">
-            <img src="img/Paladin.png" alt="Log du paladin">
-        </div>
-        <div class="heroe-card-text">
-            <h1>Paladin</h1>
-            <p class="heroe-description">Gare à celui qui se trouvera sur le chemin de son épée prodigieuse, le
-                Paladin est un héros qui livre des combats sans merci !
-            </p>
-        </div>
+    <!-- Ligne d'entête -->
+    <div class="heroe-header-line">
+        <h3>Joueur 1</h3>
+        <button id="demarrer" class="button" type="button" onclick="location.href = 'fight.html'">Démarrer</button>
+        <h3>Joueur 2</h3>
+        
     </div>
+    <form class="heroe-choice">
+        <div class ="heroe-card-choice">
+            <!-- Ligne de sélection d'un héros : de part et d'autre de la card du héros on doit mettre des cases à cocher -->
+            <div class="heroe-selection-line">
+                <input type="radio" id="Paladin-j1" name="Joueur1">
+                <div class="heroe-card">
+                    <div class="heroe-card-img">
+                        <img src="img/Paladin.png" alt="Log du paladin">
+                    </div>
+                    <div class="heroe-card-text">
+                        <h1>Paladin</h1>
+                        <p class="heroe-description">Gare à celui qui se trouvera sur le chemin de son épée prodigieuse, le
+                            Paladin est un héros qui livre des combats sans merci !
+                        </p>
+                    </div>
+                </div>
+                <input type="radio" id="Paladin-j2" name="Joueur2">
+            </div>
 
-    <!-- TODO : Case à cocher -->
+            <!-- Ligne de sélection du héros n°2 -->
+            <div class="heroe-selection-line">
+                <!-- TODO -->
+                <input type="radio" id="Shifumy-j1" name="Joueur1">
+                <div class="heroe-card">
+                    <div class="heroe-card-img">
+                        <img src="img/Shifumy.png" alt="Log du paladin">
+                    </div>
+                    <div class="heroe-card-text">
+                        <h1>Shifumy</h1>
+                        <p class="heroe-description">Son pouvoir régénérant en a usé plus d’un !
+                        </p>
+                    </div>
+                </div>
+                <input type="radio" id="Shifumy-j2" name="Joueur2">
+            </div>
 
-</div>
-
-<!-- Ligne de sélection du héros n°2 -->
-<div class="heroe-selection-line">
-    <!-- TODO -->
-</div>
-
-<!-- Ligne de sélection du héros n°3 -->
-<div class="heroe-selection-line">
-    <!-- TODO -->
-</div>
-
+            <!-- Ligne de sélection du héros n°3 -->
+            <div class="heroe-selection-line">
+                <!-- TODO -->
+                <input type="radio" id="Rashuk-j1" name="Joueur1">
+                <div class="heroe-card">
+                    <div class="heroe-card-img">
+                        <img src="img/Rashuk.png" alt="Log du paladin">
+                    </div>
+                    <div class="heroe-card-text">
+                        <h1>Rashuk</h1>
+                        <p class="heroe-description">C’est un personnage dessiné sur un coin de table 
+                            et c’est de là que lui vient le nom de sa meilleure attaque !
+                        </p>
+                    </div>
+                </div>
+                <input type="radio" id="Rashuk-j2" name="Joueur2">
+            </div>
+        </div>
+    </form>
 </body>
 </html>
